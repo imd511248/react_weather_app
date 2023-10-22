@@ -1,0 +1,40 @@
+@import "../Styles/breakpoint.scss";
+.nxtDayContainer {
+  box-shadow: 0px 0px 4px 0px rgb(251 252 255);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 9px 0;
+  background: linear-gradient(rgb(138 201 227), rgb(196 186 166), #d88181, #c66767);
+  @include if-device(phone) {
+    padding: 20px 0;
+  }
+  &__upcomingDay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // column-gap: 25px;
+    @include if-device(phone) {
+      column-gap: 15px;
+    }
+    :nth-child(1) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      column-gap: 10px;
+      & > li {
+        font-size: 30px;
+      }
+      & > span {
+        font-size: 20px;
+      }
+    }
+    :nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      column-gap: 10px;
+    }
+  }
+}

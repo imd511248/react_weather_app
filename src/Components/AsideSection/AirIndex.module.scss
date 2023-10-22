@@ -1,0 +1,42 @@
+@import "../Styles/breakpoint.scss";
+.airContainer {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > span {
+      border-radius: 30px;
+      padding: 4px 10px;
+      background-color: rgb(88, 215, 33);
+      font-weight: 500;
+    }
+  }
+  &__temp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 0 0;
+    @include if-device(phone) {
+      flex-wrap: wrap;
+    }
+    :nth-child(1) {
+      & > span {
+        font-size: 40px;
+      }
+    }
+    & > div {
+      text-align: center;
+      @include if-device(phone) {
+        padding: 5px;
+      }
+      & > p {
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(98 85 84);
+      }
+      & > strong {
+        font-size: 30px;
+      }
+    }
+  }
+}

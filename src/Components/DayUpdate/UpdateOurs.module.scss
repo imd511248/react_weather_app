@@ -1,0 +1,25 @@
+@import "../Styles/breakpoint.scss";
+.weatherDataContainer {
+  box-shadow: 0px 0px 4px 0px rgb(251 252 255);
+  background: linear-gradient(rgb(138 201 227), rgb(196 186 166), #d88181, #c66767);
+  border-radius: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  @include if-device (phone) {
+    width: 80px;
+  }
+  & > div {
+    text-align: center;
+    & > p {
+      padding: 18px 0;
+      color: rgb(33, 31, 31);
+      font-weight: 500;
+    }
+    & > span {
+      font-size: 25px;
+    }
+  }
+}

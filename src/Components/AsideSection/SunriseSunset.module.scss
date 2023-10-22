@@ -1,0 +1,42 @@
+@import "../Styles/breakpoint.scss";
+.timeContainer {
+  & > div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 33px 0 0 0;
+    @include if-device(phone) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 17px;
+      column-gap: 15px;
+    }
+    & > span {
+      font-size: 40px;
+      @include if-device(phone) {
+        display: none;
+      }
+    }
+    & > i {
+      font-size: 22px;
+      padding: 0 20px;
+      @include if-device(phone) {
+        display: none;
+      }
+    }
+    & > div {
+      & > p {
+        color: rgb(98 85 84);
+        font-size: 15px;
+        font-weight: 500;
+      }
+      & > strong {
+        font-size: 30px;
+        @include if-device(phone) {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

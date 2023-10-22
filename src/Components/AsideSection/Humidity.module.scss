@@ -1,0 +1,28 @@
+@import "../Styles/breakpoint.scss";
+.humidityCotainer {
+  & > p {
+    color: rgb(98, 85, 84);
+    font-weight: 600;
+    text-align: center;
+  }
+  &__flexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+    @include if-device(phone) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      column-gap: 4px;
+    }
+    & > span {
+      font-size: 40px;
+    }
+    & > strong {
+      font-size: 30px;
+      @include if-device(phone) {
+        font-size: 18px;
+      }
+    }
+  }
+}
