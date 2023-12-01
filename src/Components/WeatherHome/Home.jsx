@@ -52,7 +52,7 @@ const Homes = () => {
     const newApiKey = "3050828d775a7c1de9a5bc06bf111c01";
     try {
       const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${newApiKey}&exclude=minutely&units=metric`);
-      const polution = await axios.get(` http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+      const polution = await axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`);
       setAir(polution.data.list[0].components);
       setDaily(response.data.daily);
       setHours(response.data.hourly);
