@@ -10,7 +10,6 @@ import HumidityArea from "../AsideSection/Humidity";
 import UpdateWeather from "../DayUpdate/UpdateOurs";
 import axios from "axios";
 import moment from "moment";
-// http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}
 // .................................................................................................................//
 const Homes = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -61,7 +60,6 @@ const Homes = () => {
       console.log(`not fetch api:=>  ${error}`);
     }
   };
-  console.log(air);
   useEffect(() => {
     if (weatherData?.lat && weatherData?.lon) {
       getData(weatherData?.lat, weatherData?.lon);
@@ -74,6 +72,7 @@ const Homes = () => {
       axios
         .get(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`)
         .then((res) => {
+          console.log(res.data);
           const lat = res.data.coord.lat;
           const lon = res.data.coord.lon;
           const temperature = Math.floor(res.data.main.temp / 10);
