@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "./AirIndex.module.scss";
 import Paragraph from "../CommonParagraph/paragraph";
 
-const AirIndexDetails = () => {
+const AirIndexDetails = ({ pm25, so2, no2, o3 }) => {
   return (
     <>
       <div className={Styles.airContainer}>
@@ -16,19 +16,19 @@ const AirIndexDetails = () => {
           </div>
           <div>
             <p>PM 2.5</p>
-            <strong>3.90</strong>
+            <strong>{pm25}</strong>
           </div>
           <div>
             <p>SO2</p>
-            <strong>7.75</strong>
+            <strong>{so2}</strong>
           </div>
           <div>
             <p>NO2</p>
-            <strong>33.6</strong>
+            <strong>{no2}</strong>
           </div>
           <div>
             <p>O3</p>
-            <strong>38.6</strong>
+            <strong>{o3}</strong>
           </div>
         </div>
       </div>

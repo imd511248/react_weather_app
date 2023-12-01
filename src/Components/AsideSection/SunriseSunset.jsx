@@ -12,8 +12,8 @@ const SunriseSunsetTime = ({ sunrise, sunset }) => {
             <p>Sunrise</p>
             <strong>{sunrise}</strong>
           </div>
-          <i class="fa-solid fa-arrow-right-arrow-left"></i>
-          <span className="fa-solid fa-moon"></span>
+          <i className={"fa-solid fa-arrow-right-arrow-left"}></i>
+          <span className={"fa-solid fa-moon"}></span>
           <div>
             <p>Sunrise</p>
             <strong>{sunset}</strong>
